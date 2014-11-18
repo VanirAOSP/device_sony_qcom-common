@@ -16,8 +16,6 @@ COMMON_PATH := device/sony/qcom-common
 
 DEVICE_PACKAGE_OVERLAYS += $(COMMON_PATH)/overlay
 
-PRODUCT_PACKAGES += media_codecs.xml
-
 # QCOM Display
 PRODUCT_PACKAGES += \
     libgenlock \
@@ -85,6 +83,13 @@ PRODUCT_PACKAGES += \
     libQWiFiSoftApCfg \
     libqsap_sdk
 endif
+
+PRODUCT_PACKAGES += \
+    libwpa_client \
+    hostapd \
+    dhcpcd.conf \
+    wpa_supplicant \
+    wpa_supplicant.conf
 
 # QCOM Display
 PRODUCT_PROPERTY_OVERRIDES += \
